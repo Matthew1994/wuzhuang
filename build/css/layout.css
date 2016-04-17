@@ -1,0 +1,42 @@
+#header .navbar-inverse .navbar-brand {
+  background-color: #992b1a !important;
+  color: #ffffff !important;
+}
+#header .navbar-inverse .navbar-nav > li > a {
+  background-color: #992b1a !important;
+  color: #ffffff !important;
+}
+#header .navbar-inverse .navbar-nav > li > a:focus,
+#header .navbar-inverse .navbar-nav > li > a:hover {
+  color: #cccccc !important;
+}
+#header .navbar-inverse {
+  background-color: #992b1a !important;
+  color: #ffffff !important;
+}
+#header .navbar-inverse .navbar-toggle {
+  border-color: #ffffff !important;
+}
+#header .navbar-inverse .navbar-collapse,
+#header .navbar-inverse .navbar-form {
+  border-color: #992b1a !important;
+}
+#header .navbar-inverse {
+  border-color: #992b1a !important;
+}
+#header .navbar-inverse .navbar-toggle:focus,
+#header .navbar-inverse .navbar-toggle:hover {
+  background-color: #6d1f13 !important;
+}
+#header .dropdown-menu {
+  background-color: #992b1a !important;
+  color: #ffffff !important;
+}
+#header .dropdown-menu > li > a:focus,
+#header .dropdown-menu > li > a:hover {
+  background-color: #c53721 !important;
+  color: #cccccc !important;
+}
+#header .dropdown-menu > li > a {
+  color: #ffffff !important;
+}
