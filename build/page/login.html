@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <title>index</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display-->
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">民兵应急动员系统</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling-->
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">动员指挥</a></li>
+              <li><a href="#">新闻发布</a></li>
+              <li><a href="#">人员管理</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"> 登陆系统  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">登出</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">修改密码</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="login">
+        <div class="login-box">
+          <div class="login-title text-center">
+            <h1><small>登录</small></h1>
+          </div>
+          <div class="login-content">
+            <div class="form">
+              <form action="#" method="post">
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                      <input id="username" type="text" name="username" placeholder="用户名" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                      <input id="password" type="text" name="password" placeholder="密码" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-actions">
+                  <div class="col-xs-4 col-xs-offset-4">
+                    <button type="submit" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-off"></span> 登录</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-6 link">
+                    <p class="text-center remove-margin"><small>忘记密码？</small><a href="javascript:void(0)"><small>找回</small></a></p>
+                  </div>
+                  <div class="col-xs-6 link">
+                    <p class="text-center remove-margin"><small>还没注册?</small><a href="javascript:void(0)"><small>注册</small></a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

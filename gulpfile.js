@@ -9,6 +9,11 @@ gulp.task('jade',[], function() {
         pretty:true
       }))
       .pipe(gulp.dest('./build/template'));
+    gulp.src('./src/page/*.jade')
+      .pipe(jade({
+        pretty:true
+      }))
+      .pipe(gulp.dest('./build/page'));
 });
 
 gulp.task('less',[], function() {
@@ -27,6 +32,7 @@ gulp.task('babel',[], function() {
 
 gulp.task('watch',['jade', 'less', 'babel'], function() {
     gulp.watch('./src/jade/*.jade', ['jade']);
+    gulp.watch('./src/page/*.jade', ['jade']);
     gulp.watch('./src/less/*.less', ['less']);
     gulp.watch('./src/js/*.js', ['babel']);
 });
