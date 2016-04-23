@@ -1,4 +1,9 @@
-#table {
+#manage-list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#manage-list #table {
   position: absolute;
   width: 80%;
   top: 150px;
@@ -6,19 +11,19 @@
   transform: translateX(-50%);
   font-weight: bold;
 }
-#table thead {
+#manage-list #table thead {
   background-color: #660000;
   color: #ffffff;
 }
-#table tbody > tr:nth-of-type(2n) {
+#manage-list #table tbody > tr:nth-of-type(2n) {
   background-color: #aaaa55;
   color: #222222;
 }
-#table tbody > tr:nth-of-type(2n+1) {
+#manage-list #table tbody > tr:nth-of-type(2n+1) {
   background-color: #b78037;
   color: #eeeeff;
 }
-#tag {
+#manage-list #tag {
   position: absolute;
   width: 200px;
   height: 50px;
@@ -27,7 +32,7 @@
   margin-left: -100px;
   font-size: 0;
 }
-#tag div {
+#manage-list #tag div {
   display: inline-block;
   width: 49%;
   height: 30px;
@@ -38,23 +43,43 @@
   text-align: center;
   cursor: pointer;
 }
-#tag .enable:hover {
+#manage-list #tag .enable:hover {
   box-shadow: 5px 5px 3px #4d0000;
 }
-#tag .disable:hover {
+#manage-list #tag .disable:hover {
   box-shadow: 5px 5px 3px #9d9d9d;
 }
-#tag div:first-of-type {
+#manage-list #tag div:first-of-type {
   border-radius: 10px 0 0 10px;
 }
-#tag div:last-of-type {
+#manage-list #tag div:last-of-type {
   border-radius: 0 10px 10px 0;
 }
-#tag .enable {
+#manage-list #tag .enable {
   background-color: #660000;
   color: #ffffff;
 }
-#tag .disable {
+#manage-list #tag .disable {
   background-color: #aaaaaa;
   color: #ffffff;
+}
+#manage-list #add-btn {
+  position: absolute;
+  color: #803319;
+  font-size: 50px;
+  padding: 0;
+  border: 0;
+  line-height: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  right: 10%;
+  top: 80px;
+}
+#manage-list #add-btn span {
+  line-height: 50px;
+  overflow: hidden;
+}
+#manage-list #add-btn:active {
+  box-shadow: none;
+  color: #aa4422;
 }

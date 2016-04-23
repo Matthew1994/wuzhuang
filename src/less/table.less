@@ -4,67 +4,91 @@
 @login-background-color: #CC9955;
 @login-title-background-color:#660000;
 @login-botton-color: #CCCC99;
-
-#table {
+#manage-list {
 	position: absolute;
-	width:80%;
-	top:150px;
-	left:50%;
-	transform:translateX(-50%);
-	font-weight: bold;
-	thead {
-		background-color: @login-title-background-color;
-		color: @font-color;
-	}
-
-	tbody > tr:nth-of-type(2n) {
-		background-color: darken(@body-color, 20%);
-		color:#222222;
-	}
-	tbody > tr:nth-of-type(2n+1) {
-		background-color: darken(@login-background-color, 10%);
-		color:#eeeeff;
-	}
-}
-
-#tag {
-	position: absolute;
-	width: 200px;
-	height: 50px;
-	top: 100px;
-	left: 50%;
-	margin-left: -100px;
-	font-size: 0;
-	div {
-		display: inline-block;
-		width: 49%;
-		height:30px;
-		border:3px;
-		font-size: 16px;
+	width: 100%;
+	height: 100%;
+	#table {
+		position: absolute;
+		width:80%;
+		top:150px;
+		left:50%;
+		transform:translateX(-50%);
 		font-weight: bold;
-		line-height: 30px;
-		text-align: center;
-		cursor: pointer;
+		thead {
+			background-color: @login-title-background-color;
+			color: @font-color;
+		}
+
+		tbody > tr:nth-of-type(2n) {
+			background-color: darken(@body-color, 20%);
+			color:#222222;
+		}
+		tbody > tr:nth-of-type(2n+1) {
+			background-color: darken(@login-background-color, 10%);
+			color:#eeeeff;
+		}
 	}
-	.enable:hover {
-		box-shadow: 5px 5px 3px darken(@background-color, 5%);
+
+	#tag {
+		position: absolute;
+		width: 200px;
+		height: 50px;
+		top: 100px;
+		left: 50%;
+		margin-left: -100px;
+		font-size: 0;
+		div {
+			display: inline-block;
+			width: 49%;
+			height:30px;
+			border:3px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 30px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.enable:hover {
+			box-shadow: 5px 5px 3px darken(@background-color, 5%);
+		}
+		.disable:hover {
+			box-shadow: 5px 5px 3px darken(#aaaaaa, 5%);
+		}
+		div:first-of-type {
+			border-radius: 10px 0 0 10px;
+			
+		}
+		div:last-of-type {
+			border-radius: 0 10px 10px 0;
+		}
+		.enable {
+			background-color: @background-color;
+			color: #ffffff;
+		}
+		.disable {
+			background-color: #aaaaaa;
+			color:#ffffff;
+		}
 	}
-	.disable:hover {
-		box-shadow: 5px 5px 3px darken(#aaaaaa, 5%);
+	#add-btn {
+		position: absolute;
+		color:lighten(#552211, 10%);
+		font-size: 50px;
+		padding: 0;
+		border:0;
+		line-height: 50px;
+		background-color: rgba(255, 255, 255, 0);
+		margin: 0;
+		right: 10%;
+		top: 80px;
+		span {
+			line-height: 50px;
+			overflow: hidden;
+		}
 	}
-	div:first-of-type {
-		border-radius: 10px 0 0 10px;
-		
-	}
-	div:last-of-type {
-		border-radius: 0 10px 10px 0;
-	}
-	.enable {
-		background-color: @background-color;
-		color: #ffffff;
-	}
-	.disable {
-		background-color: #aaaaaa;
-		color:#ffffff;
+	#add-btn:active {
+		box-shadow:none;
+		color:lighten(#552211, 20%);
 	}
 }

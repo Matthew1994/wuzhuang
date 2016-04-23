@@ -1,0 +1,53 @@
+#info-form
+  form.form-horizontal
+    .form-group
+      h2.col-sm-12.control-label 人员信息
+    .form-group
+      label.col-sm-2.control-label 姓名
+      .col-sm-10
+        input.form-control(name='name', placeholder='姓名')
+    .form-group
+      label.col-sm-2.control-label 职务
+      .col-sm-10
+        select.form-control(name='level')
+          option 排长
+          option 班长
+          option 连长
+          option 菜鸟
+    .form-group
+      label.col-sm-2.control-label(name='lian') 连
+      .col-sm-10
+        select.form-control
+          option 一
+          option 二
+          option 三
+          option 四
+    .form-group
+      label.col-sm-2.control-label(name='pai') 排
+      .col-sm-10
+        select.form-control
+          option 一
+          option 二
+          option 三
+          option 四
+    .form-group
+      label.col-sm-2.control-label(name='ban') 班
+      .col-sm-10
+        select.form-control
+          option 一
+          option 二
+          option 三
+          option 四
+    .form-group
+      label.col-sm-2.control-label 手机
+      .col-sm-10
+        input.form-control(name='phone', placeholder='输入手机号码')
+    .form-group
+      label.col-sm-2.control-label 微信
+      .col-sm-10
+        input.form-control(name='wechat', placeholder='微信号')
+    .form-group
+      .col-sm-offset-2.col-sm-2
+        button.btn.btn-success(type='submit') 提交
+      .col-sm-offset-2.col-sm-4
+        button.btn.btn-danger.cancle 取消
