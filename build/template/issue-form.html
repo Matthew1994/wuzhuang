@@ -1,0 +1,39 @@
+
+<div id="issue-form">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <h2 class="col-sm-12 control-label">编辑集合信息</h2>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">消息内容</label>
+      <div class="col-sm-10">
+        <textarea name="content" type="text" placeholder="输入内容" rows="5" required="required" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">集合地点</label>
+      <div class="col-sm-10">
+        <input name="location" type="text" placeholder="输入集合地点" required="required" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 control-label">坐标</label>
+      <div class="col-sm-10">
+        <input name="position" type="text" placeholder="集合坐标" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-9">
+        <div id="map" class="form-control"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-2">
+        <button type="submit" class="btn btn-success">确认发布</button>
+      </div>
+      <div class="col-sm-offset-2 col-sm-4">
+        <button class="btn btn-danger cancle">取消</button>
+      </div>
+    </div>
+  </form>
+</div>

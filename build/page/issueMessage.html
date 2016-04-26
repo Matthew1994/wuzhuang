@@ -35,76 +35,37 @@
       </nav>
     </div>
     <div class="content">
-      <div id="info-form">
+      <div id="issue-form">
         <form class="form-horizontal">
           <div class="form-group">
-            <h2 class="col-sm-12 control-label">人员信息</h2>
+            <h2 class="col-sm-12 control-label">编辑集合信息</h2>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 control-label">姓名</label>
+            <label class="col-sm-2 control-label">消息内容</label>
             <div class="col-sm-10">
-              <input name="name" placeholder="姓名" class="form-control">
+              <textarea name="content" type="text" placeholder="输入内容" rows="5" required class="form-control"></textarea>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 control-label">职务</label>
+            <label class="col-sm-2 control-label">集合地点</label>
             <div class="col-sm-10">
-              <select name="level" class="form-control">
-                <option>排长</option>
-                <option>班长</option>
-                <option>连长</option>
-                <option>菜鸟</option>
-              </select>
+              <input name="location" type="text" placeholder="输入集合地点" required class="form-control">
             </div>
           </div>
           <div class="form-group">
-            <label name="lian" class="col-sm-2 control-label">连</label>
+            <label class="col-sm-2 control-label">坐标</label>
             <div class="col-sm-10">
-              <select class="form-control">
-                <option>一</option>
-                <option>二</option>
-                <option>三</option>
-                <option>四</option>
-              </select>
+              <input name="position" type="text" placeholder="集合坐标" class="form-control">
             </div>
           </div>
           <div class="form-group">
-            <label name="pai" class="col-sm-2 control-label">排</label>
-            <div class="col-sm-10">
-              <select class="form-control">
-                <option>一</option>
-                <option>二</option>
-                <option>三</option>
-                <option>四</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label name="ban" class="col-sm-2 control-label">班</label>
-            <div class="col-sm-10">
-              <select class="form-control">
-                <option>一</option>
-                <option>二</option>
-                <option>三</option>
-                <option>四</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">手机</label>
-            <div class="col-sm-10">
-              <input name="phone" placeholder="输入手机号码" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">微信</label>
-            <div class="col-sm-10">
-              <input name="wechat" placeholder="微信号" class="form-control">
+            <div class="col-sm-offset-2 col-sm-9">
+              <div id="map" class="form-control"></div>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-2">
-              <button type="submit" class="btn btn-success">提交</button>
+              <button type="submit" class="btn btn-success">确认发布</button>
             </div>
             <div class="col-sm-offset-2 col-sm-4">
               <button class="btn btn-danger cancle">取消</button>
@@ -116,5 +77,7 @@
     <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script type="text/javascript" src="./js/issueMessage.js"></script>
   </body>
 </html>
