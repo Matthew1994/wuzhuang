@@ -11,9 +11,15 @@ html
 	body
 		.content
 			.title
-				h2.col-sm-12 集合通知
-				.details.col-sm-12
+				h2.col-xs-12 集合通知
+				.position
+					.col-xs-5 集合地点:
+					.col-xs-7 海珠区公安局
+						
+				.details.col-xs-12
 					| 现在进行紧急集合演戏，请收到消息后立即前往集合地点集合。现在进行紧急集合演戏，请收到消息后立即前往集合地点集合。
-				
-				button.btn 查看地点
+				.col-xs-12
+					button.btn 查看地点
 		include ../jade/script.jade
+		script(type='text/javascript' src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
+		//- script(type='text/javascript' src="./js/wechat.js")

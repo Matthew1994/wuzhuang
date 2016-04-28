@@ -34,8 +34,9 @@ body {
 		.details {
 			font-size: 2rem;
 			background-color: lighten(@body-color, 10%);
-			padding: 0 5px;
-			margin:20px 5px 10px 5px;
+			padding: 5px;
+			margin-top:20px;
+			margin-bottom: 20px;
 			//margin-bottom: 10px;
 		}
 		.btn {
@@ -47,6 +48,17 @@ body {
 			background-color: @background-color;
 			border-color: @background-color;
 			color: @font-color;
+		}
+		.btn:hover {
+			border-color: lighten(@background-color, 10%);
+		}
+		.position {
+			position: relative;
+			width:100%;
+			div	{
+				margin-top: 10px;
+				font-weight: bold;
+			}
 		}
 
 	}

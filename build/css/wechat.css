@@ -27,8 +27,9 @@ body {
 .content .title .details {
   font-size: 2rem;
   background-color: #ddddbb;
-  padding: 0 5px;
-  margin: 20px 5px 10px 5px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .content .title .btn {
   font-size: 1.5rem;
@@ -39,4 +40,15 @@ body {
   background-color: #660000;
   border-color: #660000;
   color: #ffffff;
+}
+.content .title .btn:hover {
+  border-color: #990000;
+}
+.content .title .position {
+  position: relative;
+  width: 100%;
+}
+.content .title .position div {
+  margin-top: 10px;
+  font-weight: bold;
 }
