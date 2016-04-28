@@ -1,0 +1,58 @@
+@background-color: #660000;
+@font-color:#ffffff;
+@body-color: #CCCC99;
+@login-background-color: #CC9955;
+@login-title-background-color:#660000;
+@login-botton-color: #CCCC99;
+@btn-color:#79847f;
+#gather-history {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	#table {
+		position: absolute;
+		width:80%;
+		top:180px;
+		left:50%;
+		transform:translateX(-50%);
+		font-weight: bold;
+		thead {
+			background-color: @login-title-background-color;
+			color: @font-color;
+		}
+
+		tbody > tr:nth-of-type(2n) {
+			background-color: darken(@body-color, 20%);
+			color:#222222;
+		}
+		tbody > tr:nth-of-type(2n+1) {
+			background-color: darken(@login-background-color, 10%);
+			color:#eeeeff;
+		}
+	}
+
+	#tag {
+		position: absolute;
+		width: 400px;
+		height: 100px;
+		top: 30px;
+		left: 50%;
+		margin-left: -200px;
+		.btn {
+			color:#ffffff;
+			line-height: 100px;
+			border-radius: 30px;
+			position: relative;
+			width:100%;
+			height: 100%;
+			font-size: 30px;
+			font-weight: bold;
+			background-color: @btn-color;
+			box-shadow: 5px 10px 5px darken(@btn-color, 5%);
+		}
+		.btn:hover {
+			background-color: lighten(@btn-color, 5%);
+			box-shadow: 5px 15px 10px darken(@btn-color, 5%);
+		}
+	}
+}
