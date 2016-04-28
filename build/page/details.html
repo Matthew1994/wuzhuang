@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <title>index</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display-->
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">民兵应急动员系统</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling-->
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">动员指挥</a></li>
+              <li><a href="#">新闻发布</a></li>
+              <li><a href="#">人员管理</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"> 登陆系统  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">登出</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">修改密码</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="details">
+        <div class="time-counter">
+          <div class="date">2016.4.1-12：30~13：15</div>
+          <div class="button">结束集合</div>
+          <div class="counter"><span class="text">集合已用时</span><span class="time">00 : 45 : 34</span></div>
+        </div>
+        <div id="map">
+          <div class="header"></div>
+          <div class="map"></div>
+        </div>
+        <div class="list">
+          <div class="sumary">总体响应数据(5人已响应，5人未响应)</div>
+          <table id="table" data-filter-control="true" data-toggle="table"></table>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script type="text/javascript" src="./js/details.js"></script>
+  </body>
+</html>

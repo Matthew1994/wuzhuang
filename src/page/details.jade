@@ -1,0 +1,23 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		include ../jade/header.jade
+		.content
+			.details
+				.time-counter
+					.date 2016.4.1-12：30~13：15
+					.button 结束集合
+					.counter
+						span.text 集合已用时
+						span.time 00 : 45 : 34
+				#map
+					.header
+					.map
+				.list
+					.sumary 总体响应数据(5人已响应，5人未响应)
+					table#table(data-filter-control="true" data-toggle="table")
+					
+		include ../jade/script.jade
+		script(type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp")
+		script(type='text/javascript' src="./js/details.js")
