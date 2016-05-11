@@ -22,9 +22,12 @@
 ##进度
 目前完成
 
-+ 管理员登陆
-+ 管理人员
-+ 添加成员
-+ 修改管理员密码
-
-共四个页面
++ 管理员登陆 login.html
++ 管理人员 manage.html
++ 添加成员 addMember.html
++ 修改管理员密码 password.html
++ 集合详情页面 details.html
++ 发布信息 issueMessage.html
++ 指挥页面 zhihui.html
++ 手机显示信息页面 showMessage.html
+共8个页面
