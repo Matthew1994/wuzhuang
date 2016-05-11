@@ -9,13 +9,17 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	#table {
+	.fixed-table-container {
 		position: absolute;
 		width:80%;
 		top:180px;
 		left:50%;
 		transform:translateX(-50%);
 		font-weight: bold;
+		background-color: @background-color;
+		.pull-left,.pagination-detail {
+			color:white;
+		}
 		thead {
 			background-color: @login-title-background-color;
 			color: @font-color;

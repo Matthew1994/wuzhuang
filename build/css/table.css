@@ -3,23 +3,28 @@
   width: 100%;
   height: 100%;
 }
-#manage-list #table {
+#manage-list .fixed-table-container {
   position: absolute;
   width: 80%;
   top: 150px;
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
+  background-color: #660000;
 }
-#manage-list #table thead {
+#manage-list .fixed-table-container .pull-left,
+#manage-list .fixed-table-container .pagination-detail {
+  color: white;
+}
+#manage-list .fixed-table-container thead {
   background-color: #660000;
   color: #ffffff;
 }
-#manage-list #table tbody > tr:nth-of-type(2n) {
+#manage-list .fixed-table-container tbody > tr:nth-of-type(2n) {
   background-color: #aaaa55;
   color: #222222;
 }
-#manage-list #table tbody > tr:nth-of-type(2n+1) {
+#manage-list .fixed-table-container tbody > tr:nth-of-type(2n+1) {
   background-color: #b78037;
   color: #eeeeff;
 }

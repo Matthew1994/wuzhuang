@@ -47,6 +47,13 @@ $(function() {
     var initTable = function(columns, data) {
         $('#table').bootstrapTable('destroy');
         $('#table').bootstrapTable({
+            //url: "duoBaoActivityList",
+            //dataType: "json",
+            pagination: true, //分页
+            //singleSelect: false,
+            //data - locale: "zh-US", //表格汉化
+            //search: true, //显示搜索框
+            //sidePagination: "server", //服务端处理分页
             columns: columns,
             data: data
         });
@@ -70,7 +77,7 @@ $(function() {
         }
     ];
     var historyData = [];
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
         historyData.push({
             name: '张三',
             level: '排长',

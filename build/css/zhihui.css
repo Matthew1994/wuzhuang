@@ -3,23 +3,28 @@
   width: 100%;
   height: 100%;
 }
-#gather-history #table {
+#gather-history .fixed-table-container {
   position: absolute;
   width: 80%;
   top: 180px;
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
+  background-color: #660000;
 }
-#gather-history #table thead {
+#gather-history .fixed-table-container .pull-left,
+#gather-history .fixed-table-container .pagination-detail {
+  color: white;
+}
+#gather-history .fixed-table-container thead {
   background-color: #660000;
   color: #ffffff;
 }
-#gather-history #table tbody > tr:nth-of-type(2n) {
+#gather-history .fixed-table-container tbody > tr:nth-of-type(2n) {
   background-color: #aaaa55;
   color: #222222;
 }
-#gather-history #table tbody > tr:nth-of-type(2n+1) {
+#gather-history .fixed-table-container tbody > tr:nth-of-type(2n+1) {
   background-color: #b78037;
   color: #eeeeff;
 }
