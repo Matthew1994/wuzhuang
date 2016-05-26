@@ -1,39 +1,10 @@
-@background-color: #660000;
-@font-color:#ffffff;
-@body-color: #CCCC99;
-@login-background-color: #CC9955;
-@login-title-background-color:#660000;
-@login-botton-color: #CCCC99;
 #manage-list {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	.fixed-table-container {
-		position: absolute;
-		width:80%;
-		top:150px;
-		left:50%;
-		transform:translateX(-50%);
-		font-weight: bold;
-		background-color: @background-color;
-		.pull-left,.pagination-detail {
-			color:white;
-		}
-		thead {
-			background-color: @login-title-background-color;
-			color: @font-color;
-		}
-
-		tbody > tr:nth-of-type(2n) {
-			background-color: darken(@body-color, 20%);
-			color:#222222;
-		}
-		tbody > tr:nth-of-type(2n+1) {
-			background-color: darken(@login-background-color, 10%);
-			color:#eeeeff;
-		}
-	}
-
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 30px;
+  left: 5%;
+  /*
 	#tag {
 		position: absolute;
 		width: 200px;
@@ -95,4 +66,50 @@
 		box-shadow:none;
 		color:lighten(#552211, 20%);
 	}
+*/
+}
+#manage-list #tree {
+  position: absolute;
+  width: 20%;
+  left: 0px;
+  top: 50px;
+}
+#manage-list .fixed-table-container {
+  position: absolute;
+  width: 80%;
+  top: 50px;
+  left: 20%;
+  font-weight: bold;
+  background-color: #660000;
+}
+#manage-list .fixed-table-container .pull-left,
+#manage-list .fixed-table-container .pagination-detail {
+  color: white;
+}
+#manage-list .fixed-table-container thead {
+  background-color: #660000;
+  color: #ffffff;
+}
+#manage-list .fixed-table-container tbody > tr:nth-of-type(2n) {
+  background-color: #aaaa55;
+  color: #222222;
+}
+#manage-list .fixed-table-container tbody > tr:nth-of-type(2n+1) {
+  background-color: #b78037;
+  color: #eeeeff;
+}
+#manage-list #tag {
+  position: absolute;
+  width: 80%;
+  left: 20%;
+  height: 50px;
+  text-align: center;
+  vertical-align: center;
+  background-color: rbga(255, 255, 255, 0);
+}
+#manage-list #tag .btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 30px;
 }

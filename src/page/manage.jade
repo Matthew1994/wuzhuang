@@ -4,6 +4,10 @@ html
 	body
 		include ../jade/header.jade
 		.content
-			include ../jade/table.jade
-		include ../jade/script.jade
-		script(type='text/javascript' src="./js/table.js")
+			include ../jade/manage.jade
+		//- include ../jade/script.jade
+		script(type='text/javascript' src="./lib/jquery/dist/jquery.min.js")
+		script(type='text/javascript' src="./lib/bootstrap/dist/js/bootstrap.min.js")
+		script(type='text/javascript' src="./lib/bootstrap-table/dist/bootstrap-table.min.js")
+		script(type='text/javascript' src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js")
+		script(type='text/javascript' src="./js/manage.js")

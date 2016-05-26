@@ -123,15 +123,85 @@ body {
 }
 #manage-list {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  top: 30px;
+  left: 5%;
+  /*
+	#tag {
+		position: absolute;
+		width: 200px;
+		height: 50px;
+		top: 100px;
+		left: 50%;
+		margin-left: -100px;
+		font-size: 0;
+		div {
+			display: inline-block;
+			width: 49%;
+			height:30px;
+			border:3px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 30px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.enable:hover {
+			box-shadow: 5px 5px 3px darken(@background-color, 5%);
+		}
+		.disable:hover {
+			box-shadow: 5px 5px 3px darken(#aaaaaa, 5%);
+		}
+		div:first-of-type {
+			border-radius: 10px 0 0 10px;
+			
+		}
+		div:last-of-type {
+			border-radius: 0 10px 10px 0;
+		}
+		.enable {
+			background-color: @background-color;
+			color: #ffffff;
+		}
+		.disable {
+			background-color: #aaaaaa;
+			color:#ffffff;
+		}
+	}
+	#add-btn {
+		position: absolute;
+		color:lighten(#552211, 10%);
+		font-size: 50px;
+		padding: 0;
+		border:0;
+		line-height: 50px;
+		background-color: rgba(255, 255, 255, 0);
+		margin: 0;
+		right: 10%;
+		top: 80px;
+		span {
+			line-height: 50px;
+			overflow: hidden;
+		}
+	}
+	#add-btn:active {
+		box-shadow:none;
+		color:lighten(#552211, 20%);
+	}
+*/
+}
+#manage-list #tree {
+  position: absolute;
+  width: 20%;
+  left: 0px;
+  top: 50px;
 }
 #manage-list .fixed-table-container {
   position: absolute;
   width: 80%;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50px;
+  left: 20%;
   font-weight: bold;
   background-color: #660000;
 }
@@ -153,63 +223,18 @@ body {
 }
 #manage-list #tag {
   position: absolute;
-  width: 200px;
+  width: 80%;
+  left: 20%;
   height: 50px;
-  top: 100px;
-  left: 50%;
-  margin-left: -100px;
-  font-size: 0;
-}
-#manage-list #tag div {
-  display: inline-block;
-  width: 49%;
-  height: 30px;
-  border: 3px;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 30px;
   text-align: center;
-  cursor: pointer;
+  vertical-align: center;
+  background-color: rbga(255, 255, 255, 0);
 }
-#manage-list #tag .enable:hover {
-  box-shadow: 5px 5px 3px #4d0000;
-}
-#manage-list #tag .disable:hover {
-  box-shadow: 5px 5px 3px #9d9d9d;
-}
-#manage-list #tag div:first-of-type {
-  border-radius: 10px 0 0 10px;
-}
-#manage-list #tag div:last-of-type {
-  border-radius: 0 10px 10px 0;
-}
-#manage-list #tag .enable {
-  background-color: #660000;
-  color: #ffffff;
-}
-#manage-list #tag .disable {
-  background-color: #aaaaaa;
-  color: #ffffff;
-}
-#manage-list #add-btn {
-  position: absolute;
-  color: #803319;
-  font-size: 50px;
-  padding: 0;
-  border: 0;
-  line-height: 50px;
-  background-color: rgba(255, 255, 255, 0);
-  margin: 0;
-  right: 10%;
-  top: 80px;
-}
-#manage-list #add-btn span {
-  line-height: 50px;
-  overflow: hidden;
-}
-#manage-list #add-btn:active {
-  box-shadow: none;
-  color: #aa4422;
+#manage-list #tag .btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 30px;
 }
 #info-form {
   position: absolute;

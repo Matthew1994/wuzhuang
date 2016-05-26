@@ -36,17 +36,19 @@
     </div>
     <div class="content">
       <div id="manage-list">
+        <div id="tree"></div>
         <div id="tag">
-          <div class="enable">民兵</div>
-          <div class="disable">武装部</div>
+          <div type="button" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-edit"></span> 编辑单位信息</div>
+          <div class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加下级单位</div>
+          <div class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加单位人员</div>
         </div>
-        <div id="add-btn" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span></div>
         <table id="table" data-filter-control="true" data-toggle="table"></table>
       </div>
     </div>
     <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
-    <script type="text/javascript" src="./js/table.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <script type="text/javascript" src="./js/manage.js"></script>
   </body>
 </html>

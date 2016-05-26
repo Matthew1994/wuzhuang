@@ -1,0 +1,127 @@
+@background-color: #660000;
+@font-color:#ffffff;
+@body-color: #CCCC99;
+@login-background-color: #CC9955;
+@login-title-background-color:#660000;
+@login-botton-color: #CCCC99;
+
+#manage-list {
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	top:30px;
+	left:5%;
+	#tree {
+		position: absolute;
+		width:20%;
+		left:0px;
+		top:50px;
+	}
+
+	.fixed-table-container {
+		position: absolute;
+		width:80%;
+		top:50px;
+		left:20%;
+		// transform:translateX(-50%);
+		font-weight: bold;
+		
+		background-color: @background-color;
+		
+		.pull-left,.pagination-detail {
+			color:white;
+		}
+		thead {
+			background-color: @login-title-background-color;
+			color: @font-color;
+		}
+
+		tbody > tr:nth-of-type(2n) {
+			background-color: darken(@body-color, 20%);
+			color:#222222;
+		}
+		tbody > tr:nth-of-type(2n+1) {
+			background-color: darken(@login-background-color, 10%);
+			color:#eeeeff;
+		}
+		
+	}
+	#tag {
+		position: absolute;
+		width:80%;
+		left:20%;
+		height: 50px;
+		text-align: center;
+		vertical-align: center;
+		background-color: rbga(255, 255, 255, 0);
+		.btn {
+			position: relative;
+			top:50%;
+			transform:translateY(-50%);
+			margin-left: 30px;
+		}
+	}
+/*
+	#tag {
+		position: absolute;
+		width: 200px;
+		height: 50px;
+		top: 100px;
+		left: 50%;
+		margin-left: -100px;
+		font-size: 0;
+		div {
+			display: inline-block;
+			width: 49%;
+			height:30px;
+			border:3px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 30px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.enable:hover {
+			box-shadow: 5px 5px 3px darken(@background-color, 5%);
+		}
+		.disable:hover {
+			box-shadow: 5px 5px 3px darken(#aaaaaa, 5%);
+		}
+		div:first-of-type {
+			border-radius: 10px 0 0 10px;
+			
+		}
+		div:last-of-type {
+			border-radius: 0 10px 10px 0;
+		}
+		.enable {
+			background-color: @background-color;
+			color: #ffffff;
+		}
+		.disable {
+			background-color: #aaaaaa;
+			color:#ffffff;
+		}
+	}
+	#add-btn {
+		position: absolute;
+		color:lighten(#552211, 10%);
+		font-size: 50px;
+		padding: 0;
+		border:0;
+		line-height: 50px;
+		background-color: rgba(255, 255, 255, 0);
+		margin: 0;
+		right: 10%;
+		top: 80px;
+		span {
+			line-height: 50px;
+			overflow: hidden;
+		}
+	}
+	#add-btn:active {
+		box-shadow:none;
+		color:lighten(#552211, 20%);
+	}
+*/
+}
