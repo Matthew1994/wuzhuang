@@ -38,11 +38,196 @@
       <div id="manage-list">
         <div id="tree"></div>
         <div id="tag">
-          <div type="button" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-edit"></span> 编辑单位信息</div>
-          <div class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加下级单位</div>
-          <div class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加单位人员</div>
+          <div type="button" data-toggle="modal" data-target="#editInfo" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-edit"></span> 编辑单位信息</div>
+          <div type="button" data-toggle="modal" data-target="#addChild" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加下级单位</div>
+          <div type="button" data-toggle="modal" data-target="#addMember" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> 添加单位人员</div>
         </div>
         <table id="table" data-filter-control="true" data-toggle="table"></table>
+        <div id="editInfo" tabindex="-1" role="dialog" aria-labelledby="editInfo" class="modal fade">
+          <div role="document" class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 id="myModalLabel" class="modal-title">编辑单位信息</h4>
+              </div>
+              <div class="modal-body">
+                <form action="/editInfo" method="post" class="form-horizontal">
+                  <div class="form-group">
+                    <h2 class="col-sm-12 control-label">单位信息</h2>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">部门名字</label>
+                    <div class="col-sm-10">
+                      <input name="name" placeholder="部门名字" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="responser" class="col-sm-2 control-label">负责人</label>
+                    <div class="col-sm-10">
+                      <input name="responser" placeholder="负责人" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-10">
+                      <input name="tel" placeholder="输入联系号码" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">微信</label>
+                    <div class="col-sm-10">
+                      <input name="wechat" placeholder="微信号" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                      <button type="submit" class="btn btn-success">提交</button>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <button class="btn btn-danger cancle">取消</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="addChild" tabindex="-1" role="dialog" aria-labelledby="addChild" class="modal fade">
+          <div role="document" class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 id="myModalLabel" class="modal-title">添加下级单位</h4>
+              </div>
+              <div class="modal-body">
+                <form action="/addChild" method="post" class="form-horizontal">
+                  <div class="form-group">
+                    <h2 class="col-sm-12 control-label">下级单位信息</h2>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">部门名字</label>
+                    <div class="col-sm-10">
+                      <input name="name" placeholder="部门名字" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="responser" class="col-sm-2 control-label">负责人</label>
+                    <div class="col-sm-10">
+                      <input name="responser" placeholder="负责人" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-10">
+                      <input name="tel" placeholder="输入联系号码" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">微信</label>
+                    <div class="col-sm-10">
+                      <input name="wechat" placeholder="微信号" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                      <button type="submit" class="btn btn-success">提交</button>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <button class="btn btn-danger cancle">取消</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="addMember" tabindex="-1" role="dialog" aria-labelledby="addMember" class="modal fade">
+          <div role="document" class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 id="myModalLabel" class="modal-title">添加下级单位</h4>
+              </div>
+              <div class="modal-body">
+                <form action="/addMember" method="post" class="form-horizontal">
+                  <div class="form-group">
+                    <h2 class="col-sm-12 control-label">人员信息</h2>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">姓名</label>
+                    <div class="col-sm-10">
+                      <input name="name" placeholder="姓名" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">职务</label>
+                    <div class="col-sm-10">
+                      <select name="level" class="form-control">
+                        <option>排长</option>
+                        <option>班长</option>
+                        <option>连长</option>
+                        <option>菜鸟</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="lian" class="col-sm-2 control-label">连</label>
+                    <div class="col-sm-10">
+                      <select class="form-control">
+                        <option>一</option>
+                        <option>二</option>
+                        <option>三</option>
+                        <option>四</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="pai" class="col-sm-2 control-label">排</label>
+                    <div class="col-sm-10">
+                      <select class="form-control">
+                        <option>一</option>
+                        <option>二</option>
+                        <option>三</option>
+                        <option>四</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label name="ban" class="col-sm-2 control-label">班</label>
+                    <div class="col-sm-10">
+                      <select class="form-control">
+                        <option>一</option>
+                        <option>二</option>
+                        <option>三</option>
+                        <option>四</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">手机</label>
+                    <div class="col-sm-10">
+                      <input name="phone" placeholder="输入手机号码" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">微信</label>
+                    <div class="col-sm-10">
+                      <input name="wechat" placeholder="微信号" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                      <button type="submit" class="btn btn-success">提交</button>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <button class="btn btn-danger cancle">取消</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>

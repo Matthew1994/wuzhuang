@@ -1,13 +1,140 @@
 #manage-list
   #tree
   #tag
-    .btn.btn-default(type="button")
+    .btn.btn-default(type='button', data-toggle='modal', data-target='#editInfo')
       span.glyphicon.glyphicon-edit(aria-hidden="true")
       |  编辑单位信息
-    .btn.btn-default
+    .btn.btn-default(type='button', data-toggle='modal', data-target='#addChild')
       span.glyphicon.glyphicon-plus-sign
       |  添加下级单位
-    .btn.btn-default
+    .btn.btn-default(type='button', data-toggle='modal', data-target='#addMember')
       span.glyphicon.glyphicon-plus-sign
       |  添加单位人员
   table#table(data-filter-control="true" data-toggle="table")
+
+  #editInfo.modal.fade(tabindex='-1', role='dialog', aria-labelledby='editInfo')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4#myModalLabel.modal-title 编辑单位信息
+        .modal-body
+            form.form-horizontal(action="/editInfo" method="post")
+              .form-group
+                  h2.col-sm-12.control-label 单位信息
+              .form-group
+                label.col-sm-2.control-label 部门名字
+                .col-sm-10
+                  input.form-control(name='name', placeholder='部门名字')
+              .form-group
+                label.col-sm-2.control-label(name='responser') 负责人
+                .col-sm-10
+                  input.form-control(name='responser', placeholder='负责人')
+              .form-group
+                label.col-sm-2.control-label 联系电话
+                .col-sm-10
+                  input.form-control(name='tel', placeholder='输入联系号码')
+              .form-group
+                label.col-sm-2.control-label 微信
+                .col-sm-10
+                  input.form-control(name='wechat', placeholder='微信号')
+              .form-group
+                .col-sm-offset-2.col-sm-2
+                  button.btn.btn-success(type='submit') 提交
+                .col-sm-offset-2.col-sm-4
+                  button.btn.btn-danger.cancle 取消
+
+  #addChild.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addChild')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4#myModalLabel.modal-title 添加下级单位
+          .modal-body
+              form.form-horizontal(action="/addChild" method="post")
+                .form-group
+                  h2.col-sm-12.control-label 下级单位信息
+                .form-group
+                  label.col-sm-2.control-label 部门名字
+                  .col-sm-10
+                    input.form-control(name='name', placeholder='部门名字')
+                .form-group
+                  label.col-sm-2.control-label(name='responser') 负责人
+                  .col-sm-10
+                    input.form-control(name='responser', placeholder='负责人')
+                .form-group
+                  label.col-sm-2.control-label 联系电话
+                  .col-sm-10
+                    input.form-control(name='tel', placeholder='输入联系号码')
+                .form-group
+                  label.col-sm-2.control-label 微信
+                  .col-sm-10
+                    input.form-control(name='wechat', placeholder='微信号')
+                .form-group
+                  .col-sm-offset-2.col-sm-2
+                    button.btn.btn-success(type='submit') 提交
+                  .col-sm-offset-2.col-sm-4
+                    button.btn.btn-danger.cancle 取消
+
+  #addMember.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addMember')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4#myModalLabel.modal-title 添加下级单位
+        .modal-body
+            form.form-horizontal(action="/addMember" method="post")
+              .form-group
+                h2.col-sm-12.control-label 人员信息
+              .form-group
+                label.col-sm-2.control-label 姓名
+                .col-sm-10
+                  input.form-control(name='name', placeholder='姓名')
+              .form-group
+                label.col-sm-2.control-label 职务
+                .col-sm-10
+                  select.form-control(name='level')
+                    option 排长
+                    option 班长
+                    option 连长
+                    option 菜鸟
+              .form-group
+                label.col-sm-2.control-label(name='lian') 连
+                .col-sm-10
+                  select.form-control
+                    option 一
+                    option 二
+                    option 三
+                    option 四
+              .form-group
+                label.col-sm-2.control-label(name='pai') 排
+                .col-sm-10
+                  select.form-control
+                    option 一
+                    option 二
+                    option 三
+                    option 四
+              .form-group
+                label.col-sm-2.control-label(name='ban') 班
+                .col-sm-10
+                  select.form-control
+                    option 一
+                    option 二
+                    option 三
+                    option 四
+              .form-group
+                label.col-sm-2.control-label 手机
+                .col-sm-10
+                  input.form-control(name='phone', placeholder='输入手机号码')
+              .form-group
+                label.col-sm-2.control-label 微信
+                .col-sm-10
+                  input.form-control(name='wechat', placeholder='微信号')
+              .form-group
+                .col-sm-offset-2.col-sm-2
+                  button.btn.btn-success(type='submit') 提交
+                .col-sm-offset-2.col-sm-4
+                  button.btn.btn-danger.cancle 取消

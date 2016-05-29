@@ -1,9 +1,7 @@
 #info-form {
-  position: absolute;
-  width: 50%;
+  position: static;
+  width: 100%;
   top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 10px;
 }
 #info-form h2 {
@@ -14,7 +12,7 @@
   box-shadow: 5px 5px 3px #888844;
 }
 #info-form form {
-  position: absolute;
+  position: static;
   width: 100%;
   border: 5px solid #e5e5e5;
   background-color: #CCCC99;
