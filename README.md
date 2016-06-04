@@ -30,5 +30,6 @@
 + 发布信息 issueMessage.html
 + 指挥页面 zhihui.html
 + 手机显示信息页面 showMessage.html
++ 消息通知页面 sendMessage.html 
 
-共8个页面
+共9个页面
