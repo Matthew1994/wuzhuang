@@ -1,3 +1,5 @@
+'use strict';
+
 $(function () {
     //假如不能获取用户地理信息，那么中心设为origin的原始值
     var origin = {
@@ -40,7 +42,7 @@ $(function () {
 
     //---------------- table -------------
     //添加测试数据
-    var initTable = function (columns, data) {
+    var initTable = function initTable(columns, data) {
         $('#table').bootstrapTable('destroy');
         $('#table').bootstrapTable({
             //url: "duoBaoActivityList",

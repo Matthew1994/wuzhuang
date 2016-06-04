@@ -1,6 +1,8 @@
+'use strict';
+
 $(function () {
     //添加测试数据
-    var initTable = function (columns, data) {
+    var initTable = function initTable(columns, data) {
         $('#table').bootstrapTable('destroy');
         $('#table').bootstrapTable({
             //url: "duoBaoActivityList",
@@ -109,7 +111,7 @@ $(function () {
     */
 
     //注意：href为ajax请求数据的url
-    var Node = function (name, child1, child2) {
+    var Node = function Node(name, child1, child2) {
         return {
             text: name,
             nodes: [child1, child2],

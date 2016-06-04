@@ -1,7 +1,11 @@
 @body-color: #CCCC99;
+
 // @body-color: #CC9900;
 body {
 	background-color: @body-color;
+	background-image: url('/images/mans.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
 }
 
 .content {
@@ -18,3 +22,23 @@ body {
 @import "issueMessage.less";
 @import "zhihui.less";
 @import "details.less";
+
+//- 导航栏配色
+//@background-color: #6B8E23;
+@background-color: #608020;
+
+//- 网站背景配色
+@body-color: lighten(#CCCC99, 20%);
+
+//- 登录框配色
+@login-background-color: #fff;
+@login-title-background-color:#45BFE8;
+@login-botton-color: #45BFE8;
+
+//- 表格配色
+@table-background-odd-color: #fff;
+@table-background-even-color: lighten(@background-color, 40%);
+@table-font-odd-color: #000;
+@table-font-even-color: #000;
+@table-head-font-color: #fff;
+@table-head-backgound-color: @background-color;

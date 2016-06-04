@@ -1,9 +1,9 @@
 #manage-list {
   position: absolute;
-  width: 90%;
+  width: 70%;
   height: 100%;
   top: 30px;
-  left: 5%;
+  left: 15%;
 }
 #manage-list #tree {
   position: absolute;
@@ -24,16 +24,16 @@
   color: white;
 }
 #manage-list .fixed-table-container thead {
-  background-color: #660000;
-  color: #ffffff;
+  background-color: #fff;
+  color: #fff;
 }
 #manage-list .fixed-table-container tbody > tr:nth-of-type(2n) {
-  background-color: #aaaa55;
-  color: #222222;
+  background-color: #fff;
+  color: #fff;
 }
 #manage-list .fixed-table-container tbody > tr:nth-of-type(2n+1) {
-  background-color: #b78037;
-  color: #eeeeff;
+  background-color: #fff;
+  color: #fff;
 }
 #manage-list #tag {
   position: absolute;

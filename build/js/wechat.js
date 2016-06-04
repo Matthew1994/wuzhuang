@@ -1,3 +1,5 @@
+'use strict';
+
 $(function () {
 
 	//服务器传入配置信息

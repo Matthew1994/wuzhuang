@@ -1,7 +1,9 @@
 #gather-history {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #gather-history .fixed-table-container {
   position: absolute;
@@ -17,16 +19,16 @@
   color: white;
 }
 #gather-history .fixed-table-container thead {
-  background-color: #660000;
-  color: #ffffff;
+  background-color: #fff;
+  color: #fff;
 }
 #gather-history .fixed-table-container tbody > tr:nth-of-type(2n) {
-  background-color: #aaaa55;
-  color: #222222;
+  background-color: #fff;
+  color: #fff;
 }
 #gather-history .fixed-table-container tbody > tr:nth-of-type(2n+1) {
-  background-color: #b78037;
-  color: #eeeeff;
+  background-color: #fff;
+  color: #fff;
 }
 #gather-history #tag {
   position: absolute;

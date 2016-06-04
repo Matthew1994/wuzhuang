@@ -1,0 +1,25 @@
+#issue-form
+  form.form-horizontal
+    .form-group
+      h2.col-sm-12.control-label 编辑通知信息
+    .form-group
+      label.col-sm-2.control-label 消息内容
+      .col-sm-10
+        textarea.form-control(name='content', type='text', placeholder='输入内容',rows="20", required)
+    .form-group
+      label.col-sm-2.control-label 通知方式
+      .col-sm-3
+        input(type='checkbox', name='useWechat' checked)
+        |  微信通知
+      .col-sm-3
+        input(type='checkbox', name='useMessage')
+        |  短信通知
+      .col-sm-3
+        input(type='checkbox', name='useTel')
+        |  电话通知
+      input(type="hidden", name="collection", required)
+    .form-group
+      .col-sm-offset-2.col-sm-2
+        button.btn.btn-success(type='submit') 确认发布
+      .col-sm-offset-2.col-sm-4
+        button.btn.btn-danger.cancle 取消

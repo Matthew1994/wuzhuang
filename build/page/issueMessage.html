@@ -14,19 +14,20 @@
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display-->
           <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">民兵应急动员系统</a>
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">民兵应急指挥系统</a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling-->
           <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">动员指挥</a></li>
+              <li><a href="/zhihui.html">应急指挥</a></li>
+              <li><a href="/sendMessage.html">消息通知</a></li>
               <li><a href="#">新闻发布</a></li>
-              <li><a href="#">人员管理</a></li>
+              <li><a href="/manage.html">组织管理</a></li>
               <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"> 登陆系统  <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">登出</a></li>
+                  <li><a href="/login.html">登出</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">修改密码</a></li>
+                  <li><a href="/password.html">修改密码</a></li>
                 </ul>
               </li>
             </ul>
@@ -35,49 +36,57 @@
       </nav>
     </div>
     <div class="content">
-      <div id="issue-form">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <h2 class="col-sm-12 control-label">编辑集合信息</h2>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">消息内容</label>
-            <div class="col-sm-10">
-              <textarea name="content" type="text" placeholder="输入内容" rows="5" required class="form-control"></textarea>
+      <div class="issue-message">
+        <div class="tree">
+          <h3>选择发布单位</h3>
+          <div id="tree"></div>
+        </div>
+        <div id="issue-form">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <h2 class="col-sm-12 control-label">编辑集合信息</h2>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">集合地点</label>
-            <div class="col-sm-10">
-              <input name="location" type="text" placeholder="输入集合地点" required class="form-control">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">消息内容</label>
+              <div class="col-sm-10">
+                <textarea name="content" type="text" placeholder="输入内容" rows="5" required class="form-control"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">坐标</label>
-            <div class="col-sm-10">
-              <input name="position" type="text" placeholder="集合坐标" class="form-control">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">集合地点</label>
+              <div class="col-sm-10">
+                <input name="location" type="text" placeholder="输入集合地点" required class="form-control">
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-9">
-              <div id="map" class="form-control"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">坐标</label>
+              <div class="col-sm-10">
+                <input name="position" type="text" placeholder="集合坐标" class="form-control">
+                <input type="hidden" name="collection" required>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-2">
-              <button type="submit" class="btn btn-success">确认发布</button>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-9">
+                <div id="map" class="form-control"></div>
+              </div>
             </div>
-            <div class="col-sm-offset-2 col-sm-4">
-              <button class="btn btn-danger cancle">取消</button>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-2">
+                <button type="submit" class="btn btn-success">确认发布</button>
+              </div>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button class="btn btn-danger cancle">取消</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
-    <script type="text/javascript" src="./js/issueMessage.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <script type="text/javascript" src="./js/issueMessageFinal.js"></script>
   </body>
 </html>

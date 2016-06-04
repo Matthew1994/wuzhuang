@@ -2,15 +2,19 @@
 @font-color:#ffffff;
 @body-color: #CCCC99;
 @login-background-color: #CC9955;
-@login-title-background-color:#660000;
 @login-botton-color: #CCCC99;
-
+@table-background-odd-color: #fff;
+@table-background-even-color: #fff;
+@table-font-odd-color: #fff;
+@table-font-even-color: #fff;
+@table-head-font-color: #fff;
+@table-head-backgound-color: #fff;
 #manage-list {
 	position: absolute;
-	width: 90%;
+	width: 70%;
 	height: 100%;
 	top:30px;
-	left:5%;
+	left:15%;
 	#tree {
 		position: absolute;
 		width:20%;
@@ -32,17 +36,17 @@
 			color:white;
 		}
 		thead {
-			background-color: @login-title-background-color;
-			color: @font-color;
+			background-color: @table-head-backgound-color;
+			color: @table-head-font-color;
 		}
 
 		tbody > tr:nth-of-type(2n) {
-			background-color: darken(@body-color, 20%);
-			color:#222222;
+			background-color: @table-background-even-color;
+			color: @table-font-even-color;
 		}
 		tbody > tr:nth-of-type(2n+1) {
-			background-color: darken(@login-background-color, 10%);
-			color:#eeeeff;
+			background-color: @table-background-odd-color;
+			color: @table-font-odd-color;
 		}
 		
 	}

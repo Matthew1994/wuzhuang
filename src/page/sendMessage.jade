@@ -1,0 +1,14 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		include ../jade/header.jade
+		.content
+			.issue-message
+				.tree
+					h3 选择发布单位
+					#tree
+				include ../jade/send-message.jade
+		include ../jade/script.jade
+		script(type='text/javascript' src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js")
+		script(type='text/javascript' src="./js/sendMessageFinal.js")

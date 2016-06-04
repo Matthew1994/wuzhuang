@@ -4,7 +4,12 @@ html
 	body
 		include ../jade/header.jade
 		.content
-			include ../jade/issue-form.jade
+			.issue-message
+				.tree
+					h3 选择发布单位
+					#tree
+				include ../jade/issue-form.jade
 		include ../jade/script.jade
 		script(type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp")
-		script(type='text/javascript' src="./js/issueMessage.js")
+		script(type='text/javascript' src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js")
+		script(type='text/javascript' src="./js/issueMessageFinal.js")
