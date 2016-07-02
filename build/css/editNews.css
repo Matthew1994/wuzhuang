@@ -1,0 +1,22 @@
+#issue-news-form {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+#issue-news-form h2 {
+  text-align: center;
+  background-color: #888844;
+  color: #ffffff;
+  width: 100%;
+  box-shadow: 5px 5px 3px #888844;
+}
+#issue-news-form form {
+  position: absolute;
+  width: 100%;
+  border: 5px solid #e5e5e5;
+  background-color: #CCCC99;
+  padding: 0 10px;
+}
+#issue-news-form #map {
+  height: 300px;
+}

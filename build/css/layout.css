@@ -438,3 +438,25 @@ body {
 .details .list tbody tr:nth-of-type(2n+1) {
   background-color: #ddeedd;
 }
+#issue-news-form {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+#issue-news-form h2 {
+  text-align: center;
+  background-color: #bbbb77;
+  color: #ffffff;
+  width: 100%;
+  box-shadow: 5px 5px 3px #bbbb77;
+}
+#issue-news-form form {
+  position: absolute;
+  width: 100%;
+  border: 5px solid #e5e5e5;
+  background-color: #eeeedd;
+  padding: 0 10px;
+}
+#issue-news-form #map {
+  height: 300px;
+}

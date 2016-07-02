@@ -31,5 +31,7 @@
 + 指挥页面 zhihui.html
 + 手机显示信息页面 showMessage.html
 + 消息通知页面 sendMessage.html 
++ 新闻编辑页面(PC) editNews.html
++ 新闻投稿查看页面(PC) viewContribution.html
 
-共9个页面
+共11个页面

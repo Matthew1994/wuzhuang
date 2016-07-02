@@ -6,8 +6,8 @@ var Tree = function Tree(id, defaultData) {
         //showTags: true,
         levels: 3,
         multiSelect: true,
-        //expandIcon: "glyphicon glyphicon-stop",
-        //collapseIcon: "glyphicon glyphicon-unchecked",
+        expandIcon: "glyphicon glyphicon-stop",
+        collapseIcon: "glyphicon glyphicon-unchecked",
         nodeIcon: "glyphicon glyphicon-user",
         /*
         color: "yellow",

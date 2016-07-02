@@ -1,0 +1,71 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		include ../jade/header.jade
+		.content
+			.col-md-2
+				.panel.panel-success
+					//- .panel-heading
+					.panel-body
+						ul.list-group
+							a.list-group-item(href="/editNews.html")
+								span.glyphicon.glyphicon-edit  发布新闻
+							a.list-group-item.active(href="/viewContribution.html")
+								span.glyphicon.glyphicon-eye-open  查看投稿
+
+			.col-md-7
+				.row
+					#issue-news-form
+						form.form-horizontal
+							.form-group
+								h2.col-sm-12.control-label 投稿内容
+							.form-group
+								label.col-sm-2.control-label 
+									| 撰稿人 
+									span.glyphicon.glyphicon-user
+								.col-sm-10
+									input.form-control(name='author', type='text', placeholder='撰稿人',required)
+							.form-group
+								label.col-sm-2.control-label 
+									| 新闻标题 
+									span.glyphicon.glyphicon-header
+								.col-sm-10
+									input.form-control(name='title', type='text', placeholder='新闻标题',required)
+							.form-group
+								label.col-sm-2.control-label
+									| 消息内容 
+									span.glyphicon.glyphicon-pencil
+								.col-sm-10
+									textarea.form-control(name='content', type='text', placeholder='输入内容',rows="10", required)
+							
+							.form-group
+								label.col-sm-2.control-label 
+									| 新闻图片 
+									span.glyphicon.glyphicon-film
+								.col-sm-10
+									.row
+										- for(var i = 0 ; i < 3; i++)
+											.col-sm-6.col-md-4
+												.thumbnail
+													img(src='#', alt='', style="width:100%;height:150px;")
+													.caption
+														h3 图片名字
+							.form-group
+								.col-sm-offset-6.col-sm-2
+									button.btn.btn-success(type='submit')
+										span.glyphicon.glyphicon-ok  编辑发布
+			.col-md-3
+				.panel.panel-success
+					.panel-heading
+						| 投稿列表
+					.panel-body
+						ul.list-group
+							- for (var i = 0; i < 10; i++)
+								if (i == 0)
+									a.list-group-item.active(href="#")
+										span.glyphicon.glyphicon-envelope  #{"民兵" + i}
+								else
+									a.list-group-item(href="#")
+										span.glyphicon.glyphicon-envelope  #{"民兵" + i}
+		include ../jade/script.jade

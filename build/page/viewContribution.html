@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <title>index</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display-->
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">民兵应急指挥系统</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling-->
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/zhihui.html">应急指挥</a></li>
+              <li><a href="/sendMessage.html">消息通知</a></li>
+              <li><a href="/editNews.html">新闻发布</a></li>
+              <li><a href="/manage.html">组织管理</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"> 登陆系统  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/login.html">登出</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/password.html">修改密码</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="col-md-2">
+        <div class="panel panel-success">
+          <div class="panel-body">
+            <ul class="list-group"><a href="/editNews.html" class="list-group-item"><span class="glyphicon glyphicon-edit"> 发布新闻</span></a><a href="/viewContribution.html" class="list-group-item active"><span class="glyphicon glyphicon-eye-open"> 查看投稿</span></a></ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="row">
+          <div id="issue-news-form">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <h2 class="col-sm-12 control-label">投稿内容</h2>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">
+                   
+                  撰稿人 <span class="glyphicon glyphicon-user"></span>
+                </label>
+                <div class="col-sm-10">
+                  <input name="author" type="text" placeholder="撰稿人" required class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">
+                   
+                  新闻标题 <span class="glyphicon glyphicon-header"></span>
+                </label>
+                <div class="col-sm-10">
+                  <input name="title" type="text" placeholder="新闻标题" required class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">消息内容 <span class="glyphicon glyphicon-pencil"></span></label>
+                <div class="col-sm-10">
+                  <textarea name="content" type="text" placeholder="输入内容" rows="10" required class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">
+                   
+                  新闻图片 <span class="glyphicon glyphicon-film"></span>
+                </label>
+                <div class="col-sm-10">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail"><img src="#" alt="" style="width:100%;height:150px;">
+                        <div class="caption">
+                          <h3>图片名字</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail"><img src="#" alt="" style="width:100%;height:150px;">
+                        <div class="caption">
+                          <h3>图片名字</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail"><img src="#" alt="" style="width:100%;height:150px;">
+                        <div class="caption">
+                          <h3>图片名字</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-6 col-sm-2">
+                  <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> 编辑发布</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">投稿列表</div>
+          <div class="panel-body">
+            <ul class="list-group"><a href="#" class="list-group-item active"><span class="glyphicon glyphicon-envelope"> 民兵0</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵1</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵2</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵3</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵4</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵5</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵6</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵7</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵8</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 民兵9</span></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+  </body>
+</html>
