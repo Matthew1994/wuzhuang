@@ -33,5 +33,5 @@
 + 消息通知页面 sendMessage.html 
 + 新闻编辑页面(PC) editNews.html
 + 新闻投稿查看页面(PC) viewContribution.html
-
++ 新闻编辑页面(Mobile) editNews-MB.html
 共11个页面
