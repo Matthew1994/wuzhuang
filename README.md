@@ -34,4 +34,6 @@
 + 新闻编辑页面(PC) editNews.html
 + 新闻投稿查看页面(PC) viewContribution.html
 + 新闻编辑页面(Mobile) editNews-MB.html
-共12个页面
++ 新闻内容详情页(Mobile) newsDetails.html
++ 主页 index.html
+共14个页面

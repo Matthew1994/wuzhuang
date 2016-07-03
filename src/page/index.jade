@@ -1,0 +1,53 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		#header
+			nav.navbar.navbar-inverse
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='#') 海珠武装部
+		.content#index
+			.row
+				.col-xs-12.col-md-4
+					article.post.tag-ad
+						h2.post-title
+							a(href="#") 工作动态
+						.post-featured-image
+							a.thumbnail.loaded(href="#")
+								img(src="./images/index1.jpg", width="700", height="438")
+				.col-xs-12.col-md-4
+					article.post.tag-ad
+						h2.post-title
+							a(href="#") 民兵应急
+						.post-featured-image
+							a.thumbnail.loaded(href="#")
+								img(src="./images/index2.jpg")
+				.col-xs-12.col-md-4
+					article.post.tag-ad
+						h2.post-title
+							a(href="#") 征兵在线	
+						.post-featured-image
+							a.thumbnail.loaded(href="#")
+								img(src="./images/index3.jpg")
+		.footer
+			.copyright
+				.container
+					.row
+						.col-sm-12
+							span 
+								| Copyright © 广州市海珠区人民武装部
+					.row
+						.col-sm-12
+							span 
+								| ICP备案许可证号：粤ICP备16074660号 Copyright 2016-2017 uniproud. All Rights Reserved.
+					.row
+						.col-sm-12
+							span 
+								| 本系统由广州市海珠人民武装部与中山大学共同研发
+		include ../jade/script.jade
