@@ -4,11 +4,22 @@ html
 	body
 		include ../jade/header.jade
 		.content
-			.issue-message
-				.tree
-					h3 选择发布单位
-					#tree
-				include ../jade/send-message.jade
+			.send-message
+				.col-md-3
+					.tree
+						h3 选择发布单位
+						#tree
+				.col-md-6							
+					include ../jade/send-message.jade
+				.col-md-3
+					.panel.panel-success
+						.panel-heading
+							| 历史发布消息
+						.panel-body
+							ul.list-group
+								- for (var i = 0; i < 10; i++)
+									a.list-group-item(href="#")
+										span.glyphicon.glyphicon-envelope  #{"消息记录" + i}
 		include ../jade/script.jade
 		script(type='text/javascript' src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js")
 		script(type='text/javascript' src="./js/sendMessageFinal.js")

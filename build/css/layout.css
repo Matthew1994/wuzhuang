@@ -73,6 +73,9 @@ body {
 #header .dropdown-menu > li > a {
   color: #ffffff !important;
 }
+#header ul a.active {
+  border-bottom: 4px solid #585;
+}
 .login {
   margin: 0 auto;
   position: relative;
@@ -145,10 +148,10 @@ body {
 }
 #manage-list {
   position: absolute;
-  width: 70%;
+  width: 90%;
   height: 100%;
   top: 30px;
-  left: 15%;
+  left: 5%;
 }
 #manage-list #tree {
   position: absolute;
@@ -187,7 +190,7 @@ body {
   height: 50px;
   text-align: center;
   vertical-align: center;
-  background-color: rbga(255, 255, 255, 0);
+  background-color: #555;
 }
 #manage-list #tag .btn {
   position: relative;
@@ -299,6 +302,35 @@ body {
   padding: 0 10px;
 }
 .issue-message #issue-form #map {
+  height: 300px;
+}
+.send-message {
+  margin-top: 50px;
+}
+.send-message .tree h3 {
+  text-align: center;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  box-shadow: 5px 5px 3px #bbbb77;
+  padding: 10px;
+  margin: 0;
+}
+.send-message #issue-form h2 {
+  text-align: center;
+  background-color: #bbbb77;
+  color: #ffffff;
+  width: 100%;
+  box-shadow: 5px 5px 3px #bbbb77;
+}
+.send-message #issue-form form {
+  position: absolute;
+  width: 100%;
+  border: 5px solid #e5e5e5;
+  background-color: #eeeedd;
+  padding: 0 10px;
+}
+.send-message #issue-form #map {
   height: 300px;
 }
 #gather-history {

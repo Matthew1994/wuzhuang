@@ -36,50 +36,64 @@
       </nav>
     </div>
     <div class="content">
-      <div class="issue-message">
-        <div class="tree">
-          <h3>选择发布单位</h3>
-          <div id="tree"></div>
+      <div class="send-message">
+        <div class="col-md-3">
+          <div class="tree">
+            <h3>选择发布单位</h3>
+            <div id="tree"></div>
+          </div>
         </div>
-        <div id="issue-form">
-          <form class="form-horizontal">
-            <div class="form-group">
-              <h2 class="col-sm-12 control-label">编辑通知信息</h2>
+        <div class="col-md-6">							
+          <div id="issue-form">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <h2 class="col-sm-12 control-label">编辑通知信息</h2>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">消息内容</label>
+                <div class="col-sm-10">
+                  <textarea name="content" type="text" placeholder="输入内容" rows="20" required class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">通知方式</label>
+                <div class="col-sm-3">
+                  <input type="checkbox" name="useWechat" checked> 微信通知
+                </div>
+                <div class="col-sm-3">
+                  <input type="checkbox" name="useMessage"> 短信通知
+                </div>
+                <div class="col-sm-3">
+                  <input type="checkbox" name="useTel"> 电话通知
+                </div>
+                <input type="hidden" name="collection" required>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-2">
+                  <button type="submit" class="btn btn-success">确认发布</button>
+                </div>
+                <div class="col-sm-offset-2 col-sm-4">
+                  <button class="btn btn-danger cancle">取消</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="panel panel-success">
+            <div class="panel-heading">历史发布消息</div>
+            <div class="panel-body">
+              <ul class="list-group"><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录0</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录1</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录2</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录3</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录4</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录5</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录6</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录7</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录8</span></a><a href="#" class="list-group-item"><span class="glyphicon glyphicon-envelope"> 消息记录9</span></a>
+              </ul>
             </div>
-            <div class="form-group">
-              <label class="col-sm-2 control-label">消息内容</label>
-              <div class="col-sm-10">
-                <textarea name="content" type="text" placeholder="输入内容" rows="20" required class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-2 control-label">通知方式</label>
-              <div class="col-sm-3">
-                <input type="checkbox" name="useWechat" checked> 微信通知
-              </div>
-              <div class="col-sm-3">
-                <input type="checkbox" name="useMessage"> 短信通知
-              </div>
-              <div class="col-sm-3">
-                <input type="checkbox" name="useTel"> 电话通知
-              </div>
-              <input type="hidden" name="collection" required>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-2">
-                <button type="submit" class="btn btn-success">确认发布</button>
-              </div>
-              <div class="col-sm-offset-2 col-sm-4">
-                <button class="btn btn-danger cancle">取消</button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
     <script type="text/javascript" src="./js/sendMessageFinal.js"></script>
   </body>
