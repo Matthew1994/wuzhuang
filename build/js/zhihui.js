@@ -2,9 +2,9 @@
 
 $(function () {
 	//添加测试数据
-	var initTable = function initTable(columns, data) {
-		$('#table').bootstrapTable('destroy');
-		$('#table').bootstrapTable({
+	var initTable = function initTable(className, columns, data) {
+		$(className).bootstrapTable('destroy');
+		$(className).bootstrapTable({
 			//url: "duoBaoActivityList",
 			//dataType: "json",
 			pagination: true, //分页
@@ -18,16 +18,20 @@ $(function () {
 	};
 	var columns = [{
 		field: 'id',
-		title: '序号'
+		title: '序号',
+		sortable: true
 	}, {
 		field: 'date',
-		title: '日期'
+		title: '日期',
+		sortable: true
 	}, {
 		field: 'position',
-		title: '集合地点'
+		title: '集合地点',
+		sortable: true
 	}, {
 		field: 'time',
-		title: '用时'
+		title: '用时',
+		sortable: true
 	}];
 	var historyData = [];
 	for (var i = 0; i < 20; i++) {
@@ -38,22 +42,7 @@ $(function () {
 			time: '1小时20分'
 		});
 	}
-
-	initTable(columns, historyData);
-	/*
- $('#tag > div').on('click', function(){
- 	$(this).addClass('enable');
- 	$(this).removeClass('disable');
- 	$(this).siblings().addClass('disable');
- 	$(this).siblings().removeClass('enable');
- 
- 
- 	if ($(this).text() === "民兵") {
- 		initTable(columns, soldierData);
- 	}
- 	else {
- 		initTable(columns, leaderData);
- 	}
- });
- */
+	// 根据不同类型的数据传入参数
+	initTable('#on-going', columns, historyData);
+	initTable('#history', columns, historyData);
 });

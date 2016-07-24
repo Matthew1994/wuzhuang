@@ -1,16 +1,4 @@
-#gather-history {
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
 #gather-history .fixed-table-container {
-  position: absolute;
-  width: 80%;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: bold;
   background-color: #660000;
 }
@@ -30,17 +18,17 @@
   background-color: #fff;
   color: #fff;
 }
+#gather-history .clearfix {
+  background-color: #fff;
+}
 #gather-history #tag {
-  position: absolute;
-  width: 400px;
-  height: 100px;
-  top: 30px;
-  left: 50%;
-  margin-left: -200px;
+  width: 280px;
+  height: 70px;
+  line-height: 70px;
 }
 #gather-history #tag .btn {
   color: #ffffff;
-  line-height: 100px;
+  line-height: 70px;
   border-radius: 30px;
   position: relative;
   width: 100%;

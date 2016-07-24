@@ -333,19 +333,7 @@ body {
 .send-message #issue-form #map {
   height: 300px;
 }
-#gather-history {
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
 #gather-history .fixed-table-container {
-  position: absolute;
-  width: 80%;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: bold;
   background-color: #096043;
 }
@@ -365,17 +353,17 @@ body {
   background-color: #fff;
   color: #000;
 }
+#gather-history .clearfix {
+  background-color: #096043;
+}
 #gather-history #tag {
-  position: absolute;
-  width: 400px;
-  height: 100px;
-  top: 30px;
-  left: 50%;
-  margin-left: -200px;
+  width: 280px;
+  height: 70px;
+  line-height: 70px;
 }
 #gather-history #tag .btn {
   color: #ffffff;
-  line-height: 100px;
+  line-height: 70px;
   border-radius: 30px;
   position: relative;
   width: 100%;
@@ -652,6 +640,18 @@ body {
 .mt30 {
   margin-top: 30px !important;
 }
+.mt10 {
+  margin-top: 10px !important;
+}
+.mb5 {
+  margin-bottom: 5px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
 .no-ml {
   margin-left: 0 !important;
 }
@@ -663,4 +663,12 @@ body {
 }
 .no-pl {
   padding-left: 0 !important;
+}
+.center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.strong {
+  font-weight: bold;
 }

@@ -1,5 +1,12 @@
-#gather-history
-	#tag
+#gather-history.mt30
+	#tag.mb20.center
 		a(href='./issueMessage.html')
 			.btn 发布集合消息
-	table#table(data-filter-control="true" data-toggle="table")
+	p.strong 正在进行的集合：
+	table#on-going(data-filter-control="true" data-toggle="table")
+	div.mt30.strong
+		| 历史集合数据：
+		a.btn.btn-default.pull-right.mb5(href='./dataStat.html')
+			span.glyphicon.glyphicon-stats
+			|  数据统计
+	table#history(data-filter-control="true" data-toggle="table")

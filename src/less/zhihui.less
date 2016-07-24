@@ -11,17 +11,7 @@
 @table-head-font-color: #fff;
 @table-head-backgound-color: #fff;
 #gather-history {
-	position: absolute;
-	width: 80%;
-	height: 100%;
-	left:50%;
-	transform:translateX(-50%);
 	.fixed-table-container {
-		position: absolute;
-		width:80%;
-		top:180px;
-		left:50%;
-		transform:translateX(-50%);
 		font-weight: bold;
 		background-color: @background-color;
 		.pull-left,.pagination-detail {
@@ -40,18 +30,18 @@
 			background-color: @table-background-odd-color;
 			color:@table-font-odd-color;
 		}
-	}
 
+	}
+	.clearfix {
+		background-color: @table-head-backgound-color;
+	}
 	#tag {
-		position: absolute;
-		width: 400px;
-		height: 100px;
-		top: 30px;
-		left: 50%;
-		margin-left: -200px;
+		width: 280px;
+		height: 70px;
+		line-height: 70px;
 		.btn {
 			color:#ffffff;
-			line-height: 100px;
+			line-height: 70px;
 			border-radius: 30px;
 			position: relative;
 			width:100%;
