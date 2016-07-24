@@ -1,0 +1,42 @@
+@background-color: #660000;
+@font-color:#ffffff;
+@body-color: #CCCC99;
+@login-background-color: #CC9955;
+@login-botton-color: #CCCC99;
+@table-background-odd-color: #fff;
+@table-background-even-color: #fff;
+@table-font-odd-color: #fff;
+@table-font-even-color: #fff;
+@table-head-font-color: #fff;
+@table-head-backgound-color: #fff;
+#data-stat {
+
+	.fixed-table-container {
+
+		// transform:translateX(-50%);
+		font-weight: bold;
+		
+		background-color: @background-color;
+		
+		.pull-left,.pagination-detail {
+			color:white;
+		}
+		thead {
+			background-color: @table-head-backgound-color;
+			color: @table-head-font-color;
+		}
+
+		tbody > tr:nth-of-type(2n) {
+			background-color: @table-background-even-color;
+			color: @table-font-even-color;
+		}
+		tbody > tr:nth-of-type(2n+1) {
+			background-color: @table-background-odd-color;
+			color: @table-font-odd-color;
+		}
+		
+	}
+	.clearfix {
+		background-color: @table-head-backgound-color;
+	}
+}

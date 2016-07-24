@@ -626,3 +626,41 @@ body {
 .footer .copyright a {
   color: #555;
 }
+#data-stat .fixed-table-container {
+  font-weight: bold;
+  background-color: #096043;
+}
+#data-stat .fixed-table-container .pull-left,
+#data-stat .fixed-table-container .pagination-detail {
+  color: white;
+}
+#data-stat .fixed-table-container thead {
+  background-color: #096043;
+  color: #fff;
+}
+#data-stat .fixed-table-container tbody > tr:nth-of-type(2n) {
+  background-color: #76f2c9;
+  color: #000;
+}
+#data-stat .fixed-table-container tbody > tr:nth-of-type(2n+1) {
+  background-color: #fff;
+  color: #000;
+}
+#data-stat .clearfix {
+  background-color: #096043;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.no-ml {
+  margin-left: 0 !important;
+}
+.no-mr {
+  margin-right: 0 !important;
+}
+.no-pr {
+  padding-right: 0 !important;
+}
+.no-pl {
+  padding-left: 0 !important;
+}

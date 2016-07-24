@@ -1,0 +1,23 @@
+#data-stat .fixed-table-container {
+  font-weight: bold;
+  background-color: #660000;
+}
+#data-stat .fixed-table-container .pull-left,
+#data-stat .fixed-table-container .pagination-detail {
+  color: white;
+}
+#data-stat .fixed-table-container thead {
+  background-color: #fff;
+  color: #fff;
+}
+#data-stat .fixed-table-container tbody > tr:nth-of-type(2n) {
+  background-color: #fff;
+  color: #fff;
+}
+#data-stat .fixed-table-container tbody > tr:nth-of-type(2n+1) {
+  background-color: #fff;
+  color: #fff;
+}
+#data-stat .clearfix {
+  background-color: #fff;
+}

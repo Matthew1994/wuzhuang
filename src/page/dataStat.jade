@@ -1,0 +1,28 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		include ../jade/header.jade
+		link(rel='stylesheet' type='text/css' href="/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css")
+		#data-stat.container.mt30
+			.row
+				.col-md-6.col-lg-6.col-lg-offset-1.col-md-offset-1
+					.row
+						|<button data-src="/1" class="collection-data public btn btn-primary no-mr"> 下属单位集合数据</button><button data-src="/2" class="btn no-ml collection-data personal">民兵个人集合数据</button>
+				.col-md-4.col-lg-4
+					.form-group
+						.form-group
+							.input-group.date.date-picker.col-md-12(data-date='', data-date-format='yyyy-mm-dd', data-link-field='dtp-input', data-link-format='yyyy-mm-dd')
+								input.form-control(size='16', type='text', value='', readonly='')
+								span.input-group-addon
+									span.glyphicon.glyphicon-remove
+								span.input-group-addon
+									span.glyphicon.glyphicon-calendar
+							input#dtp-input(type='hidden', value='')
+
+			.row
+				#table
+		include ../jade/script.jade
+		script(type='text/javascript' src="./lib/bootstrap-table/dist/bootstrap-table.min.js")
+		script(type='text/javascript' src="./lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js")
+		script(type='text/javascript' src="./js/dataStat.js")
