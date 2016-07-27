@@ -3,20 +3,41 @@ html
 	include ../jade/head.jade
 	body
 		include ../jade/header.jade
-		.content
-			.details
-				.time-counter
-					.date 2016.4.1-12：30~13：15
-					.button 结束集合
-					.counter
-						span.text 集合已用时
-						span.time 00 : 45 : 34
-				#map
-					.header
-					.map
-				.list
-					.sumary 总体响应数据(5人已响应，5人未响应)
-					table#table(data-filter-control="true" data-toggle="table")
+		.container-fluid.details-header.pb30
+			.row
+				.col-md-3
+					h2
+						span.label.label-default.center 集合时间：01:14:34
+
+				.col-md-3
+					h2
+						span.label.label-default.center 召集人数: 20
+				.col-md-3
+					h2
+						span.label.label-default.center 响应人数: 10
+				.col-md-3
+					h2
+						span.label.label-default.center 签到人数: 9
+			.row.mt10
+				.col-md-3
+				.col-md-3
+					button.btn.btn-danger.center
+						span.glyphicon.glyphicon-time
+						|   结束集合
+				.col-md-3
+					button.btn.btn-default.center
+						span.glyphicon.glyphicon-plus-sign
+						|  补充集合人数
+				.col-md-3
+		.container-fluid.details
+			.row
+				.col-md-6
+					#map
+				.col-md-6
+					h4 总体集合信息
+					table#table-total(data-filter-control="true" data-toggle="table")
+					h4 详细集合信息
+					table#table-detail(data-filter-control="true" data-toggle="table")
 					
 		include ../jade/script.jade
 		script(type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp")

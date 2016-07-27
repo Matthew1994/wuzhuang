@@ -63,6 +63,17 @@ html
 								- for (var i = 0; i < 10; i++)
 									a.list-group-item(href="#")
 										span.glyphicon.glyphicon-envelope  #{"消息记录" + i}
+							nav.center
+								ul.pagination
+									li
+										a(href="#", aria-label="Previous")
+											span(aria-hidden="true") 《
+									-for (var i = 1; i < 6; i++)
+										li
+											a(href="#") #{i}
+									li
+										a(href="#", aria-label="Next")
+											span(aria-hidden="true") 》
 		include ../jade/script.jade
 		script(type='text/javascript' src="./lib/bootstrap-fileinput/js/fileinput.min.js")
 		script(type='text/javascript' src="./lib/bootstrap-fileinput/js/locales/zh.js")

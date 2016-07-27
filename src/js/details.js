@@ -44,12 +44,15 @@ $(function() {
 
     //---------------- table -------------
     //添加测试数据
-    var initTable = function(columns, data) {
-        $('#table').bootstrapTable('destroy');
-        $('#table').bootstrapTable({
+    var initTable = function(cssSelector, columns, data) {
+        $(cssSelector).bootstrapTable('destroy');
+        $(cssSelector).bootstrapTable({
             //url: "duoBaoActivityList",
             //dataType: "json",
             pagination: true, //分页
+            pageList: [3,5,20],
+            pageSize:5,
+            pageNumber:1,
             //singleSelect: false,
             //data - locale: "zh-US", //表格汉化
             //search: true, //显示搜索框
@@ -57,23 +60,29 @@ $(function() {
             columns: columns,
             data: data
         });
+
     }
     var columns = [
         {
             field: 'name',
-            title: '姓名'
+            title: '姓名',
+            sortable: true
         }, {
             field: 'level',
-            title: '职务'
+            title: '职务',
+            sortable: true
         }, {
             field: 'res',
-            title: '响应'
+            title: '响应',
+            sortable: true
         }, {
             field: 'time',
-            title: '时间'
+            title: '时间',
+            sortable: true
         }, {
             field: 'spent',
-            title: '耗时'
+            title: '耗时',
+            sortable: true
         }
     ];
     var historyData = [];
@@ -87,5 +96,6 @@ $(function() {
         });
     }
 
-    initTable(columns, historyData);
+    initTable('#table-detail', columns, historyData);
+    initTable('#table-total', columns, historyData);
 });

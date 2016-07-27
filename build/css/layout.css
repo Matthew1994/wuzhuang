@@ -377,85 +377,19 @@ body {
   background-color: #86908c;
   box-shadow: 5px 15px 10px #6d7772;
 }
-.details {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.details .time-counter {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border: 5px solid #e5e5e5;
-}
-.details .time-counter .date {
-  padding: 10px;
-  font-size: 2rem;
-  color: #ffffff;
-}
-.details .time-counter .counter {
-  position: absolute;
-  width: 100%;
-  height: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  line-height: 60px;
-  font-size: 30px;
-  font-weight: bold;
-  background-color: #888844;
-  box-shadow: 5px 5px 3px #bbbb77;
-}
-.details .time-counter .counter .text,
-.details .time-counter .counter .time {
-  padding: 20px;
-  color: #ffffff;
-}
-.details .time-counter .counter .time {
-  font-size: 50px;
-}
-.details .time-counter .button {
-  position: absolute;
-  background-color: #CC9955;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 30px;
-  color: #ffffff;
-  font-weight: bold;
-  width: 20%;
-  height: 30px;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.details .time-counter .button:hover {
-  cursor: pointer;
-  background-color: #0d8f64;
-  box-shadow: 5px 5px 3px #096043;
-}
 .details #map {
-  position: relative;
-  width: 100%;
-  height: 300px;
+  min-height: 680px;
 }
-.details .list {
-  margin-top: 10px;
-}
-.details .list .sumary {
-  font-weight: bold;
-  font-size: 2rem;
-}
-.details .list thead {
+.details thead {
   background-color: #79847f;
 }
-.details .list tbody tr:nth-of-type(2n) {
+.details tbody tr:nth-of-type(2n) {
   background-color: #aaddaa;
 }
-.details .list tbody tr:nth-of-type(2n+1) {
+.details tbody tr:nth-of-type(2n+1) {
+  background-color: #ddeedd;
+}
+.details-header {
   background-color: #ddeedd;
 }
 #issue-news-form {
@@ -651,6 +585,9 @@ body {
 }
 .mb20 {
   margin-bottom: 20px !important;
+}
+.pb30 {
+  padding-bottom: 30px !important;
 }
 .no-ml {
   margin-left: 0 !important;

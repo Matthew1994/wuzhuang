@@ -68,4 +68,15 @@ html
 								else
 									a.list-group-item(href="#")
 										span.glyphicon.glyphicon-envelope  #{"民兵" + i}
+						nav.center
+								ul.pagination
+									li
+										a(href="#", aria-label="Previous")
+											span(aria-hidden="true") 《
+									-for (var i = 1; i < 6; i++)
+										li
+											a(href="#") #{i}
+									li
+										a(href="#", aria-label="Next")
+											span(aria-hidden="true") 》
 		include ../jade/script.jade

@@ -35,20 +35,42 @@
         </div>
       </nav>
     </div>
-    <div class="content">
-      <div class="details">
-        <div class="time-counter">
-          <div class="date">2016.4.1-12：30~13：15</div>
-          <div class="button">结束集合</div>
-          <div class="counter"><span class="text">集合已用时</span><span class="time">00 : 45 : 34</span></div>
+    <div class="container-fluid details-header pb30">
+      <div class="row">
+        <div class="col-md-3">
+          <h2><span class="label label-default center">集合时间：01:14:34</span></h2>
         </div>
-        <div id="map">
-          <div class="header"></div>
-          <div class="map"></div>
+        <div class="col-md-3">
+          <h2><span class="label label-default center">召集人数: 20</span></h2>
         </div>
-        <div class="list">
-          <div class="sumary">总体响应数据(5人已响应，5人未响应)</div>
-          <table id="table" data-filter-control="true" data-toggle="table"></table>
+        <div class="col-md-3">
+          <h2><span class="label label-default center">响应人数: 10</span></h2>
+        </div>
+        <div class="col-md-3">
+          <h2><span class="label label-default center">签到人数: 9</span></h2>
+        </div>
+      </div>
+      <div class="row mt10">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          <button class="btn btn-danger center"><span class="glyphicon glyphicon-time"></span>  结束集合</button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-default center"><span class="glyphicon glyphicon-plus-sign"></span> 补充集合人数</button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <div class="container-fluid details">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="map"></div>
+        </div>
+        <div class="col-md-6">
+          <h4>总体集合信息</h4>
+          <table id="table-total" data-filter-control="true" data-toggle="table"></table>
+          <h4>详细集合信息</h4>
+          <table id="table-detail" data-filter-control="true" data-toggle="table"></table>
         </div>
       </div>
     </div>
