@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>集合通知</title>
+    <link rel="stylesheet" href="./lib/weui/dist/style/weui.css" />
+    <link rel="stylesheet" href="./lib/weui/dist/example/example.css" />
+    <style type="text/css">
+        #map-container {
+            width: 100%;
+            min-height: 300px;
+        }
+    </style>
+</head>
+
+<body ontouchstart>
+    <div class="container" id="container">
+        <div class="hd">
+            <h1 class="page_title">集合通知</h1>
+        </div>
+        <div class="bd">
+            <form class="weui_cells weui_cells_form">
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
+                        <label class="weui_label">集合地点：</label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>海珠区</p>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
+                        <label class="weui_label">集合时间：</label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>2016/07/28 10:00</p>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <article class="weui_article">
+                            <section>
+                                <p>进行紧急集合演练，请收到信息后立即前往集合地点集合！</p>
+                            </section>
+                        <article>
+                    </div>
+                </div>
+
+                <div class="weui_cells weui_cells_form">
+                    <div class="weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <div id="map-container"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_btn_area">
+                    <button class="weui_btn weui_btn_primary" action="submit">导航</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./lib/weui/dist/example/zepto.min.js"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script type="text/javascript">
+    $(function() {
+        
+        //初始化地图函数  自定义函数名init
+        function init() {
+            //定义map变量 调用 qq.maps.Map() 构造函数   获取地图显示容器
+             var map = new qq.maps.Map(document.getElementById("map-container"), {
+                center: new qq.maps.LatLng(39.916527,116.397128),      // 地图的中心地理坐标。
+                zoom:8                                                 // 地图的中心地理坐标。
+            });
+        }
+
+        //调用初始化函数地图
+        init();
+    });
+    </script>
+</body>
+
+</html>
