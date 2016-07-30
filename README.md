@@ -29,12 +29,14 @@
 + 集合详情页面 details.html
 + 发布信息 issueMessage.html
 + 指挥页面 zhihui.html
-+ 手机显示信息页面 showMessage.html
++ 手机显示信息页面 showMessage.html(旧版本)
 + 消息通知页面 sendMessage.html 
 + 新闻编辑页面(PC) editNews.html
 + 新闻投稿查看页面(PC) viewContribution.html
 + 新闻编辑页面(Mobile) editNews-MB.html
 + 新闻内容详情页(Mobile) newsDetails.html
 + 主页 index.html
++ 查看集合信息(Mobile) message.html
++ 导航页(Mobile) map.html
 
-共14个页面
+共16个页面
