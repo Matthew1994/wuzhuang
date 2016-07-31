@@ -38,5 +38,6 @@
 + 主页 index.html
 + 查看集合信息(Mobile) message.html
 + 导航页(Mobile) map.html
++ 错误页面 error.html
 
-共16个页面
+共17个页面

@@ -74,7 +74,8 @@ body {
   color: #ffffff !important;
 }
 #header ul a.active {
-  border-bottom: 4px solid #585;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
 }
 .login {
   margin: 0 auto;
@@ -573,6 +574,12 @@ body {
 }
 .mt30 {
   margin-top: 30px !important;
+}
+.mt80 {
+  margin-top: 80px !important;
+}
+.mt100 {
+  margin-top: 100px !important;
 }
 .mt10 {
   margin-top: 10px !important;

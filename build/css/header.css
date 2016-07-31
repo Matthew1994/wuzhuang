@@ -66,5 +66,6 @@
   color: #ffffff !important;
 }
 #header ul a.active {
-  border-bottom: 4px solid #585;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
 }
