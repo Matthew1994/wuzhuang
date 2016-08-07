@@ -73,9 +73,22 @@
                     </div>
                 </div>
                 <div class="weui_btn_area">
-                    <a href="/map.html" class="weui_btn weui_btn_primary" id="leading">导航</a>
+                    <a id="showActionSheet" class="weui_btn weui_btn_primary" id="leading">导航</a>
                 </div>
             </form>
+        </div>
+        <div id="actionSheet_wrap">
+            <div class="weui_mask_transition" id="mask"></div>
+            <div class="weui_actionsheet" id="weui_actionsheet">
+                <div class="weui_actionsheet_menu">
+                    <div class="weui_actionsheet_cell" id="BdMap">百度地图</div>
+                    <div class="weui_actionsheet_cell" id="GdMap">高德地图</div>
+                    <div class="weui_actionsheet_cell" onclick="window.location.href= '/map.html';return false">腾讯地图</div>
+                </div>
+                <div class="weui_actionsheet_action">
+                    <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./lib/weui/dist/example/zepto.min.js"></script>
@@ -84,6 +97,32 @@
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>  -->
     <script type="text/javascript">
     $(function() {
+
+        $('#container').on('click', '#showActionSheet', function () {
+            var mask = $('#mask');
+            var weuiActionsheet = $('#weui_actionsheet');
+            weuiActionsheet.addClass('weui_actionsheet_toggle');
+            mask.show()
+                .focus()//加focus是为了触发一次页面的重排(reflow or layout thrashing),使mask的transition动画得以正常触发
+                .addClass('weui_fade_toggle').one('click', function () {
+                hideActionSheet(weuiActionsheet, mask);
+            });
+            $('#actionsheet_cancel').one('click', function () {
+                hideActionSheet(weuiActionsheet, mask);
+            });
+            mask.unbind('transitionend').unbind('webkitTransitionEnd');
+
+            function hideActionSheet(weuiActionsheet, mask) {
+                weuiActionsheet.removeClass('weui_actionsheet_toggle');
+                mask.removeClass('weui_fade_toggle');
+                mask.on('transitionend', function () {
+                    mask.hide();
+                }).on('webkitTransitionEnd', function () {
+                    mask.hide();
+                })
+            }
+        });
+
         //以纬度和经度表示的地理坐标点。
         //假如不能获取用户地理信息，那么中心设为origin的原始值
         var origin = {
@@ -95,6 +134,19 @@
             latitude: 23.06349,
             longitude: 113.38684
         };
+
+        //--------------------------- 调用百度地图和高德地图 -------------------
+
+        $('#GdMap').on('click', function(e) {
+            window.location.href= 'androidamap://navi?sourceApplication=appname&poiname=集合点&lat=' + dest.latitude+ '&lon=' + dest.longitude + '&dev=1&style=2';
+            return false;
+        });
+
+        $('#BdMap').on('click', function(e) {
+            window.location.href= 'bdapp://map/direction?origin=latlng:'+dest.latitude+',' + dest.longitude + '|name:目的地&destination=集合点&mode=driving&region=广州&src=webapp.navi.yourCompanyName.yourAppName';
+            return false;
+        });
+
 
         //------------------------------------ weixin --------------------------
         //服务器传入配置信息
