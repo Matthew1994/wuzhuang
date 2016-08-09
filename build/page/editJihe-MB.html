@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>新闻编辑</title>
+    <link rel="stylesheet" href="./lib/weui/dist/style/weui.css" />
+    <link rel="stylesheet" href="./lib/weui/dist/example/example.css" />
+    <style type="text/css">
+        .mr10 {
+            margin-right: 10px;
+        }
+        #map {
+            width:100%;
+            height:250px;
+        }
+    </style>
+</head>
+
+<body ontouchstart>
+    <div class="container" id="container">
+        <div class="hd">
+            <h1 class="page_title">编辑集合信息</h1>
+        </div>
+        <div class="bd">
+            <form class="weui_cells weui_cells_form">
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
+                        <label class="weui_label">集合地点</label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="text" placeholder="输入集合地点" name="location" required/>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
+                        <label class="weui_label">集合坐标</label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="text" placeholder="在下面的地图选位置" name="position" required />
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div id="map"></div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <textarea class="weui_textarea" placeholder="请输入消息内容" rows="5" name="content" required></textarea>
+                    </div>
+                </div>
+                <div class="weui_cell"></div>
+                <div class="weui_cells_title">连</div>
+                <div class="weui_cells weui_cells_checkbox">
+                    <label class="weui_cell weui_check_label" for="s11">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="lian1" class="weui_check" name="lian" id="s11" checked="checked">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>一连</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s12">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="lian2" name="lian" class="weui_check" id="s12">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>二连</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s13">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="all" name="lian" class="weui_check" id="s13">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>全选</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cells_title">排</div>
+                <div class="weui_cells weui_cells_checkbox">
+                    <label class="weui_cell weui_check_label" for="s14">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="pai1" class="weui_check" name="pai" id="s14" checked="checked">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>一排</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s15">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="pai2" name="pai" class="weui_check" id="s15">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>二排</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s16">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="all" name="pai" class="weui_check" id="s16">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>全选</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cells_title">班</div>
+                <div class="weui_cells weui_cells_checkbox">
+                    <label class="weui_cell weui_check_label" for="s17">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="ban1" class="weui_check" name="ban" id="s17" checked="checked">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>一班</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s18">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="ban2" name="ban" class="weui_check" id="s18">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>二班</p>
+                        </div>
+                    </label>
+                    <label class="weui_cell weui_check_label" for="s19">
+                        <div class="weui_cell_hd">
+                            <input type="checkbox" value="all" name="ban" class="weui_check" id="s19">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>全选</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">
+                        <i class="weui_icon_info mr10"></i>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <p>体验更完善的选择方式，请登录PC端！</p>
+                    </div>
+                </div>
+                <div class="weui_btn_area">
+                    <button class="weui_btn weui_btn_primary" action="submit">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./lib/weui/dist/example/zepto.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script type="text/javascript">
+        $(function () {
+            //假如不能获取用户地理信息，那么中心设为origin的原始值
+            var origin = {
+                latitude: 23.06209,
+                longitude: 113.38654
+            };
+
+            function init() {
+                //以纬度和经度表示的地理坐标点。
+                var center = new qq.maps.LatLng(origin.latitude, origin.longitude);
+                var map = new qq.maps.Map(document.getElementById("map"), //在id="map"的 HTML 容器中创建新的地图
+                {
+                    center: center, //初始的地图中心
+                    zoom: 14 //地图等级
+                });
+
+                var marker = new qq.maps.Marker({
+                    position: center,
+                    map: map
+                });
+                //绑定单击事件添加参数
+                qq.maps.event.addListener(map, 'click', function (event) {
+                    marker.setPosition(event.latLng);
+                    var xy = '(' + event.latLng.getLat().toFixed(6) + ", " + event.latLng.getLng().toFixed(6) + ')';
+                    $("input[name='position']")[0].value = xy;
+                });
+            }
+            if (!!navigator.geolocation) {
+                //返回当前位置，需要请求用户是否能获取其地理位置
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    origin.latitude = position.coords.latitude;
+                    origin.longitude = position.coords.longitude;
+                    init();
+                }, function (err) {
+                    init();
+                });
+            } else {
+                init();
+            }
+        });
+    </script>
+</body>
+
+</html>

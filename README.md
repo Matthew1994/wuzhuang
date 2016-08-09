@@ -39,5 +39,8 @@
 + 查看集合信息(Mobile) message.html
 + 导航页(Mobile) map.html
 + 错误页面 error.html
-
-共17个页面
++ 军旅风采（列表页） feicai_list.html
++ 军旅风采（编辑页） feicai_edit.html
++ 军旅风采（首页，MB） feicai-MB.html
++ 集合消息编辑页（Mobile） editJihe-MB.html
+共21个页面

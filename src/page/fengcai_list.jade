@@ -1,0 +1,27 @@
+doctype html
+html
+	include ../jade/head.jade
+	body
+		#header
+			nav.navbar.navbar-inverse
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='#') 军旅风采
+					a.pull-right.mt30.mr10.no-a-style(href="./index.html")
+						i.glyphicon.glyphicon-chevron-left
+						span.ml5 返回主页	
+		.content#fengcai_list
+			#tag.mb20.mt20.center
+				a(href='#')
+					.btn 添加新内容
+			.container
+				table#table-fengcai(data-filter-control="true" data-toggle="table")
+		include ../jade/script.jade
+		script(type='text/javascript' src="./js/fengcai_list.js")
+
+

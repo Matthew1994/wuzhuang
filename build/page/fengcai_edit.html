@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <title>index</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap-fileinput/css/fileinput.min.css">
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">军旅风采</a>
+          </div><a href="./index.html" class="pull-right mt30 mr10 no-a-style"><i class="glyphicon glyphicon-chevron-left"></i><span class="ml5">返回主页	</span></a>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="container mt20">
+        <div id="issue-news-form">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <h2 class="col-sm-12 control-label">编辑内容</h2>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">
+                 
+                选送单位 <span class="glyphicon glyphicon-user"></span>
+              </label>
+              <div class="col-sm-10">
+                <input name="dest" type="text" placeholder="单位" required class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">
+                 
+                标题 <span class="glyphicon glyphicon-header"></span>
+              </label>
+              <div class="col-sm-10">
+                <input name="title" type="text" placeholder="标题" required class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">内容 <span class="glyphicon glyphicon-pencil"></span></label>
+              <div class="col-sm-10">
+                <textarea name="content" type="text" placeholder="输入内容" rows="10" required class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">
+                 
+                图片 <span class="glyphicon glyphicon-film"></span>
+              </label>
+              <div class="col-sm-10">
+                <input id="input-44" name="input44[]" type="file" multiple class="file-loading">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <div role="alert" class="alert alert-info">注意：第一张图片为封面图片，其余的为内容图片</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-2">
+                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> 确认发布</span></button>
+              </div>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button class="btn btn-danger cancle"><span class="glyphicon glyphicon-remove"> 取消</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="./js/layout.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-fileinput/js/locales/zh.js"></script>
+    <script type="text/javascript" src="./js/editNews.js"></script>
+  </body>
+</html>
